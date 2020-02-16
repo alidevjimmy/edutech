@@ -1,0 +1,23 @@
+.background_color_body {
+    background-color: #281047;
+}
+.dark_yellow {
+    background-color: #fff200;
+}
+.shadow_yellow {
+    /*box-shadow: 0px 2px 0 0 #fffa65;*/
+    /*border: 2px solid #fff200;*/
+}
+.form{
+    margin: auto;
+    max-width: 400px;
+    height: auto;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.err {
+    border-right: 2px solid rgb(244, 67, 54);
+    border-left: 2px solid rgb(244, 67, 54);
+    border-top: 2px solid rgb(244, 67, 54);
+}

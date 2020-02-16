@@ -1,0 +1,65 @@
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/dana-fanum-regular.eot');
+    src: url('/fonts/dana-fanum-regular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('/fonts/dana-fanum-regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('/fonts/dana-fanum-regular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/fonts/Dana-FaNum-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/dana-fanum-bold.eot');
+    src: url('/fonts/dana-fanum-bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('/fonts/dana-fanum-bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('/fonts/dana-fanum-bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/fonts/Dana-FaNum-Bold.ttf') format('truetype');
+}
+
+body ,html{
+    font-family: IRANSans !important;
+    font-size: 16px !important;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+::selection {
+    color: white;
+    background: #fff200;
+}
+
+@media only screen and (min-width: 768px) {
+    .form{
+        margin: auto;
+        width: 100% !important;
+        height: auto;
+        padding: 10px;
+    }
+}
+.form-control {
+    transition: 0s all !important;
+    -webkit-transition: 0s all !important;
+}
+
+.MuiSnackbarContent-message {
+    font-family: IRANSans !important;
+}
