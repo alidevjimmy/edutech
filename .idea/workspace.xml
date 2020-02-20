@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58ba60cb-4ed4-4398-b93b-51b5d1bc1398" name="Default Changelist" comment="" />
+    <list default="true" id="58ba60cb-4ed4-4398-b93b-51b5d1bc1398" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/font.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/FormComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/FormComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/container/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/container/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +26,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -111,6 +121,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Xq0Eb6ANdqi09GCH4Hwkkr8HLz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -162,7 +173,15 @@
       <workItem from="1581769098659" duration="4170000" />
       <workItem from="1581774055910" duration="23948000" />
       <workItem from="1581801296776" duration="2000" />
-      <workItem from="1581834789323" duration="7718000" />
+      <workItem from="1581834789323" duration="7865000" />
+      <workItem from="1581844450275" duration="641000" />
+      <workItem from="1581872432124" duration="5812000" />
+      <workItem from="1581946441587" duration="4096000" />
+      <workItem from="1581955040255" duration="608000" />
+      <workItem from="1581961560132" duration="6760000" />
+      <workItem from="1581971590283" duration="647000" />
+      <workItem from="1582144656751" duration="1477000" />
+      <workItem from="1582189116412" duration="2061000" />
     </task>
     <servers />
   </component>
@@ -170,17 +189,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="501" y="402" key="com.intellij.ide.util.TipDialog" timestamp="1581834790180">
+    <state x="501" y="402" key="com.intellij.ide.util.TipDialog" timestamp="1582189123110">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="501" y="402" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1581834790180" />
+    <state x="501" y="402" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1582189123110" />
     <state x="560" y="162" width="857" height="781" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581790006882">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="560" y="162" width="857" height="781" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1581790006882" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1581795603225">
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1582189133470">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1581795603225" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1582189133470" />
   </component>
 </project>

@@ -11,7 +11,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import {green} from '@material-ui/core/colors';
 import Fab from '@material-ui/core/Fab';
 import clsx from 'clsx';
-import {SnackbarProvider, useSnackbar} from 'notistack';
+import Alert from '@material-ui/lab/Alert'
 
 
 const useStyles = makeStyles(theme => ({
@@ -53,19 +53,6 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-function MyApp(props) {
-    const {enqueueSnackbar} = useSnackbar();
-
-    useEffect(() => {
-        enqueueSnackbar(`${props.message}`, {variant: props.variant});
-    })
-
-    return (
-        <React.Fragment>
-            {/*<Button onClick={handleClickVariant('success')}>Show success snackbar</Button>*/}
-        </React.Fragment>
-    );
-}
 
 const FormComponent = () => {
     const [state, setState] = useState(1);
@@ -86,7 +73,7 @@ const FormComponent = () => {
     const [success, setSuccess] = React.useState(false);
     const timer = React.useRef();
     const [variant, setVariant] = useState('');
-    const [message, setMessage] = useState( '')
+    const [message, setMessage] = useState('')
     const buttonClassname = clsx({
         [classes.buttonSuccess]: success,
     });
@@ -118,7 +105,7 @@ const FormComponent = () => {
                 setLable('توضیحات')
                 break;
         }
-    } , [name , phone , lable , inputLable , description , familyE , family , success , state , nameE , descriptionE , phoneE , submitLoading , backLbale])
+    })
 
     const goNext = () => {
         if (state <= 4) {
@@ -203,7 +190,7 @@ const FormComponent = () => {
     }
 
     const submit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         if (description == '' || description == null) {
             setDescriptionE(1);
         }
@@ -215,7 +202,7 @@ const FormComponent = () => {
                 phone,
                 description
             }
-            axios.post('http://localhost:3000/api/store', data)
+            axios.post('http://hamedan-founders.ir/api/store', data)
                 .then(res => {
                     setVariant('success')
                     setMessage('اطلاعات با موفقیت ثبت شد')
@@ -233,6 +220,10 @@ const FormComponent = () => {
 
     return (
         <div className='background_color_body form'>
+            {variant != '' && variant != null ? <>
+                <Alert variant="filled" severity="success">
+                    {message}
+                </Alert><br/></> : null}
             <div style={{width: '100%', padding: '0px 23px 28px 10px', textAlign: 'right'}}>
 
                 <div style={{cursor: 'pointer', display: 'contents'}} onClick={goBack}>
@@ -251,6 +242,12 @@ const FormComponent = () => {
                     {state == 1 ? <Form.Control type="text" name={inputLable[state - 1]}
                                                 onChange={onChange}
                                                 value={name}
+                                                onKeyPress={(ev) => {
+                                                    if (ev.key === 'Enter') {
+                                                        goNext()
+                                                    }
+                                                }}
+                                                autoFocus
                                                 placeholder={state != 4 ? `${lable} خود را وارد کنید ` : null}
 
                                                 style={nameE ?
@@ -272,6 +269,12 @@ const FormComponent = () => {
                         state == 2 ? <Form.Control type="text" name={inputLable[state - 1]}
                                                    onChange={onChange}
                                                    value={family}
+                                                   onKeyPress={(ev) => {
+                                                       if (ev.key === 'Enter') {
+                                                           goNext()
+                                                       }
+                                                   }}
+                                                   autoFocus
                                                    placeholder={state != 4 ? `${lable} خود را وارد کنید ` : null}
                                                    style={familyE ?
                                                        {
@@ -293,6 +296,12 @@ const FormComponent = () => {
                         state == 3 ? <Form.Control type="text" name={inputLable[state - 1]}
                                                    onChange={onChange}
                                                    value={phone}
+                                                   onKeyPress={(ev) => {
+                                                       if (ev.key === 'Enter') {
+                                                           goNext()
+                                                       }
+                                                   }}
+                                                   autoFocus
                                                    placeholder={state != 4 ? `${lable} خود را وارد کنید ` : null}
                                                    style={phoneE ?
                                                        {
@@ -315,6 +324,12 @@ const FormComponent = () => {
                                                    onChange={onChange}
                                                    value={description}
                                                    as="textarea" rows="3"
+                                                   onKeyPress={(ev) => {
+                                                       if (ev.key === 'Enter') {
+                                                           submit()
+                                                       }
+                                                   }}
+                                                   autoFocus
                                                    placeholder='چرا میخواهید با شتابدهنده همکاری کنید؟'
                                                    style={descriptionE ?
                                                        {
@@ -375,7 +390,6 @@ const FormComponent = () => {
                                             marginTop: '10px',
                                             width: '118px'
                                         }}
-
                                     >
                                         <Check size={24} style={{color: 'white'}}/>
                                     </Button>
@@ -385,11 +399,6 @@ const FormComponent = () => {
 
                 </Form.Group>
             </Form>
-            {variant != '' && variant != null ?
-                <SnackbarProvider maxSnack={3}>
-                    <MyApp variant={variant} message={message}/>
-                </SnackbarProvider>
-                : null}
         </div>
     )
 }
